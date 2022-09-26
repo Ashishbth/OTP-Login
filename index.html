@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>OTP INPUT FIELD</title>
+</head>
+<body id="bdy">
+    <input type="text" id="clr" placeholder="Type any color name" onkeyup="document.getElementById('bdy').style.background = this.value">
+    <div class="prompt">
+        Enter the code generated on your mobile device below to log in !
+    </div>
+
+
+    <form method="get" class="digit-group" data-group-name="digits"  data-autosubmit="false" autocomplete="off">
+        <div class="form">
+            <input type="text" id="ist" name="digit-1" data-next="digit-2" maxlength="1" onkeyup="clickEvent(this , 'ist')">
+            <input type="text" id="sec" name="digit-2" data-next="digit-3" data-previous="digit-2" maxlength="1" onkeyup="clickEvent(this , 'sec')">
+            <input type="text" id="third" name="digit-3" data-next="digit-4" data-previous="digit-3" maxlength="1" onkeyup="clickEvent(this , 'third')">
+            <input type="text" id="fourth" name="digit-4" data-next="digit-5" data-previous="digit-4" maxlength="1" onkeyup="clickEvent(this , 'fourth')">
+        </div>
+        <button type="submit" id="btn" class="btn">Submit</button>
+    </form>
+</body>
+</html>
